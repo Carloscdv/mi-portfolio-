@@ -1,4 +1,4 @@
-## Titulo
+# Titulo
 # mi-portfolio-
 portafolio personal profesional
 
