@@ -12,6 +12,8 @@ body {
     padding-top: 80px;
 }
 
+/* --- Header y Navegación --- */
+
 header {
     background-color: #1A237E;
     color: white;
@@ -54,6 +56,8 @@ nav a:hover {
     border-bottom: 2px solid #FFC107;
 }
 
+/* --- Estilos de Contenido General --- */
+
 section {
     padding: 2rem 5%;
     max-width: 1200px;
@@ -80,6 +84,8 @@ h2 {
     margin-bottom: 1rem;
     text-align: justify;
 }
+
+/* --- Proyectos (Tabla) --- */
 
 #proyectos table {
     width: 100%;
@@ -115,52 +121,68 @@ h2 {
     transition: background-color 0.3s ease;
 }
 
-
+/* --- Habilidades (Diseño Centrado con Grid) --- */
 
 .habilidades-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .habilidad-grupo {
-    flex: 1 1 200px;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     border: 1px solid #3949AB;
-    border-radius: 5px;
-    background-color: #F9F9F9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidad-grupo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .habilidad-grupo h3 {
-    font-weight: bold;
     color: #1A237E;
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #FFC107;
+    display: inline-block;
 }
 
 .habilidad-grupo ul {
     list-style: none;
     padding: 0;
+    margin-top: 15px;
+    text-align: left;
 }
 
 .habilidad-grupo li {
     font-weight: normal;
-    color: #212121;
+    color: #424242;
     margin-top: 0.5rem;
-    padding-left: 15px;
+    padding-left: 25px;
     position: relative;
+    font-size: 0.95rem;
 }
 
 .habilidad-grupo li::before {
-    content: '★';
-    color: #FFC107;
-    font-size: 0.8rem;
+    content: '✓';
+    color: #3949AB;
+    font-weight: bold;
+    font-size: 1.1rem;
     position: absolute;
     left: 0;
     top: 0;
 }
 
+/* --- Contacto --- */
 
 #contacto p {
     margin-bottom: 0.5rem;
@@ -178,6 +200,8 @@ h2 {
     display: inline-block;
 }
 
+/* --- Footer --- */
+
 footer {
     background-color: #1A237E;
     color: white;
@@ -185,6 +209,8 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
 }
+
+/* --- Diseño Responsive (Mobile First) --- */
 
 @media (max-width: 768px) {
     header h1 {
@@ -213,9 +239,9 @@ footer {
         font-size: 0.9rem;
     }
 
-   
+    /* Estilo responsive para habilidades: apila los grupos en una columna */
     .habilidades-grid {
-        flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        grid-template-columns: 1fr;
     }
 }
