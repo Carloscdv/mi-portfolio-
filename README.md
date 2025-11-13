@@ -7,7 +7,7 @@ portafolio personal profesional
 Creacion de una web profesional desde cero 
 ## Enlace a la Página Publicada
 
-https://carloscdv.github.io/practica-portfolio/
+https://carloscdv.github.io/mi-portfolio-/
 
 ## Tecnologías Utilizadas
 
