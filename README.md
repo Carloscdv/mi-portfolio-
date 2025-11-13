@@ -1,6 +1,6 @@
 ## Titulo
 mi-portfolio
-portafolio personal profesional
+
 
 
 ## Descripción del Proyecto
