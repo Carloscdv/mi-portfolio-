@@ -89,4 +89,133 @@ h2 {
 
 #proyectos th {
     background-color: #3949AB;
-    color: white
+    color: white;
+    padding: 1rem;
+}
+
+#proyectos td {
+    padding: 1rem;
+    border: 1px solid #E0E0E0;
+    vertical-align: top;
+}
+
+#proyectos tr:nth-child(even) {
+    background-color: #F9F9F9;
+}
+
+#proyectos tr:last-child a {
+    color: #1A237E;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+#proyectos tr:hover {
+    background-color: #E0E0E0;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.habilidades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.habilidad-grupo {
+    flex: 1 1 200px;
+    padding: 1rem;
+    border: 1px solid #3949AB;
+    border-radius: 5px;
+    background-color: #F9F9F9;
+}
+
+.habilidad-grupo h3 {
+    font-weight: bold;
+    color: #1A237E;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.habilidad-grupo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.habilidad-grupo li {
+    font-weight: normal;
+    color: #212121;
+    margin-top: 0.5rem;
+    padding-left: 15px;
+    position: relative;
+}
+
+.habilidad-grupo li::before {
+    content: '★';
+    color: #FFC107;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+#contacto p {
+    margin-bottom: 0.5rem;
+}
+
+#contacto a {
+    color: #3949AB;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contacto a:hover {
+    color: #FFC107;
+    transform: translateY(-2px);
+    display: inline-block;
+}
+
+footer {
+    background-color: #1A237E;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 1rem 3%;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    #proyectos td, #proyectos th {
+        padding: 0.7rem 0.5rem;
+        font-size: 0.9rem;
+    }
+
+   
+    .habilidades-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
